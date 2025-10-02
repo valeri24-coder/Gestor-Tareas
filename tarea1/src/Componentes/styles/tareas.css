@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* CONTENEDORES */
+.abajo {
+  background: #1d2230; 
+  padding: 80px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column; 
+}
+
+/* NUEVA TAREA */
+.nueva-tarea {
+  background: #1d2230;
+  display: flex;
+  justify-content: center;
+}
+
+.nueva-tarea button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  background-color: #7c3aed;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.nueva-tarea button:hover {
+  background-color: #6d28d9;
+}
+
+
+.tareas {
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 20px;               
+  justify-content: center; 
+}
+
+.tarjeta {
+  background: white;
+  width: 100%;
+  max-width: 280px;        
+  min-height: 140px;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px black;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px black;
+}
+
+
+.acciones-tarjeta {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.acciones-tarjeta button {
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, background 0.2s;
+  background: #6549ff; 
+  color: white;
+}
+
+.acciones-tarjeta button:hover {
+  background: #4b32b8;
+  transform: scale(1.05);
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 20px #6549ff;
+  animation: aparecer 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@keyframes aparecer {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+.modal-contenido input,
+.modal-contenido textarea,
+.modal-contenido select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+
+.acciones-modal {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.acciones-modal button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.acciones-modal button:first-child {
+  background-color: #7c3aed;
+  color: white;
+}
+
+.acciones-modal button:first-child:hover {
+  background-color: #6d28d9;
+}
+
+.acciones-modal button:last-child {
+  background-color: #6d28d9;
+  color: white;
+}
+
+.acciones-modal button:last-child:hover {
+  background-color: #7c3aed;
+}
+
+
+@media (max-width: 768px) {
+  .tareas {
+    flex-direction: column;
+    align-items: center; 
+  }
+}

@@ -1,0 +1,23 @@
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  background: transparent; 
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.titulo-encabezado {
+ font-size: clamp(2rem, 6vw, 70px);
+  color: #1d2637;
+  font-weight: bold;
+  text-align: center; 
+}
