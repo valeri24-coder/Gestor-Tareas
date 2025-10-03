@@ -11,9 +11,9 @@
 
 .todo {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  width: 100%;          
 }
-
 /* NUEVA TAREA */
 .nueva-tarea {
   background: #1d2230;
@@ -33,34 +33,35 @@
 }
 
 .nueva-tarea button:hover {
-  background-color: #6d28d9;
+  background-color: #5b21b6;
 }
 
 
 .tareas {
   display: flex;
-  flex-wrap: wrap;         
-  gap: 20px;               
-  justify-content: center; 
+  flex-wrap: wrap;       
+  gap: 20px;
+  justify-content: flex-start;
+  width: 100%;         
 }
 
 .tarjeta {
-  background: white;
-  width: 100%;
-  max-width: 280px;        
-  min-height: 140px;
+ background: white;
+  flex: 1 1 200px;     
+  min-height: 150px;
   padding: 18px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px black;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid #eee
 }
 
 .tarjeta:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px black;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 
@@ -85,7 +86,7 @@
 }
 
 .acciones-tarjeta button:hover {
-  background: #4b32b8;
+  background: #5b21b6;
   transform: scale(1.05);
 }
 
@@ -170,6 +171,6 @@
 @media (max-width: 768px) {
   .tareas {
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
   }
 }
